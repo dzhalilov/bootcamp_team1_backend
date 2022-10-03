@@ -1,1 +1,30 @@
+spring:
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+  datasource:
+    name: heroku
+    url: jdbc:postgresql://ec2-3-225-110-188.compute-1.amazonaws.com:5432/db1jc0aiqe2pse
+    username: gcnpiifutllltq
+    password: 1244115ae56f98fdc453932a9bc7218c5ae9fda7c7888310147c09468f1fd0ce
+    driver-class-name: org.postgresql.Driver
+
+  security:
+    user:
+      name: admin
+      password: admin
+
+server.servlet:
+  encoding:
+    charset: UTF-8
+    enabled: true
+    force: true
+
 
