@@ -6,6 +6,8 @@ spring:
       ddl-auto: create
     properties:
       hibernate:
+        jdbc:
+          time_zone: UTC
         format_sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
@@ -21,10 +23,15 @@ spring:
       name: admin
       password: admin
 
+  messages:
+    encoding: UTF-8
+
 server.servlet:
   encoding:
     charset: UTF-8
     enabled: true
     force: true
+
+
 
 
